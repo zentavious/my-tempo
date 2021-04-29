@@ -1,8 +1,8 @@
-# my-tempo
+# my Tempo
 An Alexa Skill that integrates with Tempo/Jira
 
 **Motivation:**
-We understand that sometimes the benefits of time tracking come at the cost of the developer/employee. This means breaking focus or the zen of coding to log time/work and can be frustrating. Our goal was to create a tool that takes the hassle out of time/work tracking and management by using voice commands that feel more like a conversation. My-Tempo, a jira/tempo/alexa integration, provide users a headache free way of tracking time & logging work. The use of voice as a medium for this task is invasive when users are focusing on completing work and allows users to mulitask with a costing context switch.
+We understand that sometimes the benefits of time tracking come at the cost of the developer/employee. This means breaking focus or the zen of coding to log time/work and can be frustrating. Our goal was to create a tool that takes the hassle out of time/work tracking and management by using voice commands that feel more like a conversation. My Tempo, a jira/tempo/alexa integration, provide users a headache free way of tracking time & logging work. The use of voice as a medium for this task is invasive when users are focusing on completing work and allows users to mulitask with a costing context switch.
 
 We wanted to use Alexa Skill Kit for a few reasons. 
 1. It was a an opportunity to learn a new tool that was well documented and mature (~6 years old).
