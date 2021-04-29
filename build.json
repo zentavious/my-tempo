@@ -1,0 +1,801 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my tempo",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CreateIssueIntent",
+                    "slots": [
+                        {
+                            "name": "issueType",
+                            "type": "IssueType",
+                            "samples": [
+                                "a {issueType}",
+                                "Create a {issueType}",
+                                "{issueType}"
+                            ]
+                        },
+                        {
+                            "name": "summary",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{summary}"
+                            ]
+                        },
+                        {
+                            "name": "description",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{description}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Create a {issueType}",
+                        "Create an issue"
+                    ]
+                },
+                {
+                    "name": "CreateAssignMeIssueIntent",
+                    "slots": [
+                        {
+                            "name": "issueType",
+                            "type": "IssueType"
+                        },
+                        {
+                            "name": "summary",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{summary}"
+                            ]
+                        },
+                        {
+                            "name": "description",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{description}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "create a {issueType} and assign it to me",
+                        "create and assign me a {issueType}",
+                        "create and assign me an issue"
+                    ]
+                },
+                {
+                    "name": "TransitionIssueIntent",
+                    "slots": [
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{issueNumber}"
+                            ]
+                        },
+                        {
+                            "name": "issueTransition",
+                            "type": "IssueTransitions",
+                            "samples": [
+                                "move it to {issueTransition}",
+                                "set it to {issueTransition}",
+                                "set issue {issueNumber} to {issueTransition}",
+                                "move issue {issueNumber} to {issueTransition}",
+                                "{issueTransition}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "move issue {issueNumber}",
+                        "move {issueNumber}",
+                        "move an issue",
+                        "set issue {issueNumber} to {issueTransition}",
+                        "set {issueNumber} to {issueTransition}",
+                        "move {issueNumber} to {issueTransition}",
+                        "move issue {issueNumber} to {issueTransition}"
+                    ]
+                },
+                {
+                    "name": "GetMyIssuesIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "what are my issues for {date}",
+                        "get issues",
+                        "list issues",
+                        "get issues for {date}",
+                        "list issues due by {date}",
+                        "list issues due on {date}",
+                        "list issues for {date}",
+                        "list tasks for {date}",
+                        "What are my tasks {date}",
+                        "What do I need to do on {date}",
+                        "What do I do  I need to  do {date}",
+                        "list my issues for {date}",
+                        "what are my tasks for {date}",
+                        "what are my current issues",
+                        "what do I have to do {date}",
+                        "what are my current tickets",
+                        "get my issues for {date}",
+                        "list my issues",
+                        "get my issues"
+                    ]
+                },
+                {
+                    "name": "CreateWorklogIntent",
+                    "slots": [
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "issue number {issueNumber}",
+                                "issue {issueNumber}",
+                                "{issueNumber}"
+                            ]
+                        },
+                        {
+                            "name": "startDate",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "log it on {startDate} at {startTime}",
+                                "log it on {startDate}",
+                                "{startDate}"
+                            ]
+                        },
+                        {
+                            "name": "startTime",
+                            "type": "AMAZON.TIME",
+                            "samples": [
+                                "I started at {startTime}",
+                                "I started it at {startTime}",
+                                "{startTime}"
+                            ]
+                        },
+                        {
+                            "name": "timeMinutes",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "I worked on it for {timeMinutes}",
+                                "I worked on it for {timeMinutes} minutes",
+                                "{timeMinutes} minutes",
+                                "{timeMinutes}"
+                            ]
+                        },
+                        {
+                            "name": "billableTimeMinutes",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "bill them for {billableTimeMinutes}",
+                                "bill them for {billableTimeMinutes} minutes",
+                                "{billableTimeMinutes} minutes",
+                                "{billableTimeMinutes}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "log {timeMinutes} minutes for issue {issueNumber} {startDate}",
+                        "log {timeMinutes} minutes for issue {issueNumber} at {startTime}",
+                        "log {timeMinutes} minutes for issue {issueNumber} on {startDate}",
+                        "log {timeMinutes} minutes",
+                        "log {timeMinutes} minutes for issue {issueNumber} on {startDate} at {startTime}",
+                        "make a worklog",
+                        "create a worklog for issue {issueNumber} on {startDate} at {startTime}",
+                        "create a worklog for issue {issueNumber} at {startTime}",
+                        "create a worklog for issue {issueNumber} on {startDate}",
+                        "create a worklog for issue {issueNumber} ",
+                        "create a worklog"
+                    ]
+                },
+                {
+                    "name": "GetNumberOfIssuesIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "number of tasks {date}",
+                        "number of issues {date}",
+                        "list number of issues due {date}",
+                        "what issues are due {date}",
+                        "list the number of issues",
+                        "how many issues do I have in progress",
+                        "amount of current issues open",
+                        "list number of issues",
+                        "number of issues",
+                        "how many issues do I have"
+                    ]
+                },
+                {
+                    "name": "SubmitTimeIntent",
+                    "slots": [
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month",
+                            "samples": [
+                                "{month}",
+                                "submit {month}"
+                            ]
+                        },
+                        {
+                            "name": "user",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Submit it to {user}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Submit my timesheet",
+                        "Submit my timesheet for {month}"
+                    ]
+                },
+                {
+                    "name": "CreatePlanIntent",
+                    "slots": [
+                        {
+                            "name": "minutes",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{minutes} minutes"
+                            ]
+                        },
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "number {issueNumber}",
+                                "{issueNumber}",
+                                "Issue number {issueNumber}"
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "Create it for {date}",
+                                "{date}"
+                            ]
+                        },
+                        {
+                            "name": "recurrence",
+                            "type": "PlanRecurrence",
+                            "samples": [
+                                "{recurrence}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "plan {minutes} minutes of work on issue {issueNumber} on {date}",
+                        "Plan {minutes} minutes {date}",
+                        "Plan {minutes} minutes of work on issue {issueNumber} {date}"
+                    ]
+                },
+                {
+                    "name": "SetProjectIntent",
+                    "slots": [
+                        {
+                            "name": "project",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "my project is {project}",
+                        "set project to {project}",
+                        "set default project to {project}",
+                        "set the project to {project}",
+                        "set my project to {project}",
+                        "could you set my project for me "
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "IssueType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Task"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Improvement"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Epic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Feature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bug"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IssueTransitions",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "done"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "to do"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "in review"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "in progress"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PlanRecurrence",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "BI_WEEKLY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MONTHLY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DAILY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WEEKLY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NEVER"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CreateIssueIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "issueType",
+                            "type": "IssueType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.971149815394.411010556863"
+                            }
+                        },
+                        {
+                            "name": "summary",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.971149815394.105877376795"
+                            }
+                        },
+                        {
+                            "name": "description",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.971149815394.438126114302"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CreateAssignMeIssueIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "issueType",
+                            "type": "IssueType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "summary",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.159343638095.1375777029031"
+                            }
+                        },
+                        {
+                            "name": "description",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.159343638095.588568919778"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TransitionIssueIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.350006212317.173639448535"
+                            }
+                        },
+                        {
+                            "name": "issueTransition",
+                            "type": "IssueTransitions",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.350006212317.303310462447"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CreateWorklogIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.354244186155.657724065077"
+                            }
+                        },
+                        {
+                            "name": "startDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.354244186155.656244101444"
+                            }
+                        },
+                        {
+                            "name": "startTime",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.354244186155.1016609163153"
+                            }
+                        },
+                        {
+                            "name": "timeMinutes",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.354244186155.1455841250555"
+                            }
+                        },
+                        {
+                            "name": "billableTimeMinutes",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.354244186155.109147847416"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SubmitTimeIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.829353640421"
+                    },
+                    "slots": [
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1410309981296.725149840668"
+                            }
+                        },
+                        {
+                            "name": "user",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1410309981296.810785145667"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CreatePlanIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "minutes",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.188105649909.987069915048"
+                            }
+                        },
+                        {
+                            "name": "issueNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.188105649909.174370523873"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.188105649909.37927691173"
+                            }
+                        },
+                        {
+                            "name": "recurrence",
+                            "type": "PlanRecurrence",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.188105649909.18037785357"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.971149815394.411010556863",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of issue should I create?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.971149815394.105877376795",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Can you give me a summary of the {issueType} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.971149815394.438126114302",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Describe the {issueType} for me."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.159343638095.1375777029031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Can you give me a summary of the {issueType} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.159343638095.588568919778",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Describe the {issueType} for me."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.350006212317.173639448535",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What's the issue number?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.350006212317.303310462447",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What state should I set issue {issueNumber} to?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What state should I move issue {issueNumber} to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354244186155.657724065077",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What's the issue number I should log this work against?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354244186155.656244101444",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What day should I log this work on?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354244186155.1016609163153",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What time did you start this work?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354244186155.109147847416",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How many minutes should I bill the customer for this work?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.354244186155.1455841250555",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How long did you work on this in minutes?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1410309981296.810785145667",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Who should I submit your timesheet too?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1410309981296.725149840668",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What month's timesheet should I submit?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.188105649909.174370523873",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What issue number will you be working on?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.188105649909.987069915048",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How long do you plan to work for in minutes?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.188105649909.37927691173",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What date should I create the plan for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.188105649909.18037785357",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How often should this recur. Never, Daily, or Weekly?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.829353640421",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you'd like to submit {month} 's timesheet?"
+                    }
+                ]
+            }
+        ]
+    }
+}
