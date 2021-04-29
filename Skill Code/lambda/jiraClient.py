@@ -33,7 +33,7 @@ def getTransitionId(issueNumber, transitionName):
 def sendPost(api_url, payload):
     base_url = "https://fivestack.atlassian.net/rest/"
 
-    auth = 'askjira@tutanota.com:OaWlwFsvazOq3KeqcLNbBB62'.encode('ascii')
+    auth = 'askjira@tutanota.com:{{ReplaceMe}}'.encode('ascii')
     
     headers = {
         "Authorization": f"Basic {base64.b64encode(auth).decode('ascii')}",
@@ -50,7 +50,7 @@ def sendPost(api_url, payload):
 def sendGet(api_url, query = None):
     base_url = "https://fivestack.atlassian.net/rest/"
 
-    auth = 'askjira@tutanota.com:OaWlwFsvazOq3KeqcLNbBB62'.encode('ascii')
+    auth = 'askjira@tutanota.com:{{ReplaceMe}}'.encode('ascii')
     
     headers = {
         "Authorization" : f"Basic {base64.b64encode(auth).decode('ascii')}"
