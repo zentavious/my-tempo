@@ -10,15 +10,15 @@ We wanted to use Alexa Skill Kit for a few reasons.
 3. By the end of 2020, Amazon held the largest market share of smart speakers [globaly](https://www.statista.com/statistics/792604/worldwide-smart-speaker-market-share/).
 
 **Supported Scenarios**
-_Jira features_
-List Issues
-Move Issues
-Create Issues
-Assign Issues
-_Tempo features_
-Create Worklogs
-Create Planned Work
-Submit Timesheets
+1. _Jira features_
+* List Issues
+* Move Issues
+* Create Issues
+* Assign Issues
+2. _Tempo features_
+* Create Worklogs
+* Create Planned Work
+* Submit Timesheets
 
 **Sample Dialog:**
 
