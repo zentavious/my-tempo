@@ -1,7 +1,7 @@
 # my-tempo
 An Alexa Skill that integrates with Tempo/Jira
 
-At the end of every work day comes making sure you properly fill your worklog out. Now whether this was done through keeping notes on the side, or by breaking coding zens and making sure to fill out your issues/tickets as you work. It's always a hassle. I think alot of developers can relate to this issue, and so we developed myTempo. A jira-tempo-alexa integration(say that s3 times fast) to provide developers a headache free, way of tracking time & logging work. 
+With the end of every work day comes making sure you properly fill your worklog out. Now whether this was done through keeping notes on the side, or by breaking coding zens and making sure to fill out your issues/tickets as you work. It's always a hassle. I think alot of developers can relate to this issue, and so we developed myTempo. A jira-tempo-alexa integration(say that s3 times fast) to provide developers a headache free, way of tracking time & logging work. 
 
 Sample Scenario:
 
