@@ -9,7 +9,7 @@ def postTempo(api_url, payload, params=None):
     base_url = "https://api.tempo.io/core/3/"
 
     headers = {
-        "Authorization": "Bearer TKdXnm461oIv3jHzjo70Bx9yVqnJZv ",
+        "Authorization": "Bearer {{Replace Me}} ",
         "Accept": "application/json",
         "Content-Type": "application/json"
     }
