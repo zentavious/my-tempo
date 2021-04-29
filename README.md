@@ -1,25 +1,44 @@
 # my-tempo
 An Alexa Skill that integrates with Tempo/Jira
 
-With the end of every work day comes making sure you properly fill your worklog out. Now whether this was done through keeping notes on the side, or by breaking coding zens and making sure to fill out your issues/tickets as you work. It's always a hassle. I think alot of developers can relate to this issue, and so we developed myTempo. A jira-tempo-alexa integration(say that s3 times fast) to provide developers a headache free, way of tracking time & logging work. 
+**Motivation:**
+We understand that sometimes the benefits of time tracking come at the cost of the developer/employee. This means breaking focus or the zen of coding to log time/work and can be frustrating. Our goal was to create a tool that takes the hassle out of time/work tracking and management by using voice commands that feel more like a conversation. My-Tempo, a jira/tempo/alexa integration, provide users a headache free way of tracking time & logging work. The use of voice as a medium for this task is invasive when users are focusing on completing work and allows users to mulitask with a costing context switch.
 
-Sample Scenario:
+We wanted to use Alexa Skill Kit for a few reasons. 
+1. It was a an opportunity to learn a new tool that was well documented and mature (~6 years old).
+2. The Alexa SKill Market place is a thriving ecosystem if we wanted to publish the skill.
+3. By the end of 2020, Amazon held the largest market share of smart speakers [globaly](https://www.statista.com/statistics/792604/worldwide-smart-speaker-market-share/).
 
-    User: my tempo
-    User: create issue
+**Supported Scenarios**
+_Jira features_
+List Issues
+Move Issues
+Create Issues
+Assign Issues
+_Tempo features_
+Create Worklogs
+Create Planned Work
+Submit Timesheets
+
+**Sample Dialog:**
+
+    User: Alexa open my tempo
+    User: create an issue
     Alexa: What type of issue should I create?
-    User: bug
+    User: a bug
     Alexa: Can you give me a summary of the bug ?
-    User: call not working
+    User: http call to dependent service is not working
     Alexa: Describe the bug for me.
-    User: http request not returning a proper request
+    User: http request not returning a proper request format, we need to investigate the change log on our dependent service
     Alexa: I created TT-12 for you.
 
-How to use:
+**How to use:**
     
     invocation name: my tempo
     
-  samples
+    alexa, ask my tempo ___
+    
+**Examples:**
                     
     "what are my issues for {date}",
     "Plan {minutes} minutes of work on issue {issueNumber} {date}
